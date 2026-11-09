@@ -1,0 +1,449 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Abroad | VEDIC Education Services</title>
+  <link rel="icon" href="assets/logo/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .abroad-page {
+      font-family: Arial, sans-serif;
+      color: #0b2142;
+      background: #f4f9ff;
+    }
+
+    .abroad-page * { box-sizing: border-box; }
+
+    .abroad-nav {
+      min-height: 76px;
+      padding: 12px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      background: white;
+      border-bottom: 1px solid #e5eaf1;
+    }
+
+    .abroad-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #0b2142;
+      text-decoration: none;
+    }
+
+    .abroad-brand img {
+      width: 55px;
+      height: 55px;
+      object-fit: contain;
+    }
+
+    .abroad-brand strong {
+      display: block;
+      font: bold 30px Georgia, serif;
+      letter-spacing: 1px;
+    }
+
+    .abroad-brand small {
+      display: block;
+      margin-top: 3px;
+      font-size: 11px;
+      letter-spacing: 3px;
+    }
+
+    .abroad-links {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+
+    .abroad-links a {
+      color: #14223a;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .abroad-links .counselling {
+      padding: 17px 23px;
+      background: #091f40;
+      color: white;
+      border-radius: 35px;
+    }
+
+    .abroad-hero {
+      min-height: 300px;
+      padding: 40px 9%;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(90deg, #06264f 0%, #073365e8 43%, #07336515 100%),
+        url("https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1800&q=85")
+        center 48% / cover;
+      color: white;
+    }
+
+    .abroad-hero-content { max-width: 600px; }
+
+    .abroad-eyebrow {
+      color: #ffc94f;
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .abroad-hero h1 {
+      margin: 10px 0;
+      font-size: clamp(36px, 5vw, 58px);
+      line-height: 1.02;
+      color: white;
+    }
+
+    .abroad-hero h1 span { color: #ffd477; }
+
+    .abroad-hero p {
+      font-size: 16px;
+      line-height: 1.65;
+      color: white;
+    }
+
+    .abroad-features {
+      position: relative;
+      margin: -18px auto 35px;
+      width: 88%;
+      padding: 23px 18px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      background: white;
+      border: 1px solid #e3e9f1;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px #0b21420c;
+    }
+
+    .abroad-feature {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 4px 10px;
+      border-right: 1px solid #d8e0eb;
+      font-size: 13px;
+      font-weight: bold;
+      line-height: 1.4;
+    }
+
+    .abroad-feature:last-child { border-right: 0; }
+
+    .feature-icon {
+      min-width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      background: #eaf3ff;
+      border-radius: 50%;
+      font-size: 23px;
+    }
+
+    .abroad-destinations {
+      width: 88%;
+      max-width: 1350px;
+      margin: 0 auto 32px;
+    }
+
+    .abroad-heading { text-align: center; margin-bottom: 22px; }
+
+    .abroad-heading .eyebrow {
+      color: #d28a00;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+    }
+
+    .abroad-heading h2 {
+      margin: 8px 0;
+      font-size: clamp(25px, 3vw, 36px);
+    }
+
+    .abroad-heading p {
+      margin: 0;
+      color: #5a6b84;
+      line-height: 1.6;
+    }
+
+    .country-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .country-card {
+      overflow: hidden;
+      background: white;
+      border: 1px solid #dce5ef;
+      border-radius: 11px;
+      box-shadow: 0 4px 10px #102b4812;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .country-card > img {
+      display: block;
+      width: 100%;
+      height: 125px;
+      object-fit: cover;
+    }
+
+    .country-content { padding: 12px; flex: 1; }
+
+    .country-title {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      margin: -28px 0 12px;
+      position: relative;
+    }
+
+    .country-title .flag {
+      font-size: 30px;
+      filter: drop-shadow(0 1px 2px #0002);
+    }
+
+    .country-title h3 {
+      margin: 0;
+      padding: 5px 8px;
+      background: #ffffffed;
+      border-radius: 6px;
+      font-size: 17px;
+    }
+
+    .country-content strong { font-size: 12px; }
+
+    .country-content p {
+      min-height: 42px;
+      margin: 5px 0 12px;
+      color: #435570;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .country-enquire {
+      display: block;
+      margin-top: auto;
+      padding: 12px 8px;
+      text-align: center;
+      text-decoration: none;
+      color: white;
+      background: #08254a;
+      border-radius: 7px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .country-enquire:hover { background: #0c427c; }
+
+    .abroad-cta {
+      width: 88%;
+      max-width: 1350px;
+      min-height: 125px;
+      margin: 0 auto 35px;
+      padding: 24px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      border-radius: 14px;
+      color: white;
+      background: linear-gradient(110deg, #05234b, #1168a8 75%, #78bde8);
+    }
+
+    .abroad-cta .eyebrow {
+      color: #ffcf55;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .abroad-cta h2 { margin: 8px 0; font-size: 28px; color: white; }
+    .abroad-cta p { margin: 0; line-height: 1.5; color: white; }
+
+    .abroad-cta a {
+      flex-shrink: 0;
+      padding: 16px 25px;
+      background: #ffc332;
+      color: #082448;
+      border-radius: 9px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    @media (max-width: 900px) {
+      .abroad-nav { flex-direction: column; }
+      .abroad-links { justify-content: center; gap: 15px; }
+      .abroad-features { grid-template-columns: repeat(2, 1fr); }
+      .abroad-feature { border-right: 0; }
+      .country-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 520px) {
+      .abroad-hero { padding: 35px 6%; min-height: 280px; }
+      .abroad-features, .abroad-destinations, .abroad-cta { width: 92%; }
+      .abroad-features { grid-template-columns: 1fr; }
+      .abroad-feature { justify-content: flex-start; }
+      .country-grid { grid-template-columns: 1fr; }
+      .abroad-cta { align-items: flex-start; flex-direction: column; padding: 22px; }
+      .abroad-brand strong { font-size: 25px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="header">
+  <div class="container nav">
+    <a class="brand" href="index.html" aria-label="Vedic Educational Services home">
+      <img src="assets/logo/vedic-logo.png" alt="Vedic Educational Services">
+      <span class="brand-text">
+        <strong>VEDIC</strong>
+        <small>EDUCATION SERVICES</small>
+      </span>
+    </a>
+
+    <button class="menu" aria-label="Open menu">☰</button>
+
+    <nav class="navlinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="blog.html">Blogs</a>
+      <a href="contact.html" class="nav-cta">Free Counselling ↗</a>
+    </nav>
+  </div>
+</header>
+
+  
+  <section class="abroad-hero">
+    <div class="abroad-hero-content">
+      <div class="abroad-eyebrow">STUDY ABROAD</div>
+      <h1>Global Education<br><span>Opportunities</span></h1>
+      <p>Explore top countries, universities and courses with expert guidance.
+        Build a brighter future with global opportunities.</p>
+    </div>
+  </section>
+
+  <section class="abroad-features">
+    <div class="abroad-feature"><span class="feature-icon">🎓</span>Top Universities</div>
+    <div class="abroad-feature"><span class="feature-icon">📄</span>Wide Course Options</div>
+    <div class="abroad-feature"><span class="feature-icon">🌐</span>Visa & Application Support</div>
+    <div class="abroad-feature"><span class="feature-icon">👥</span>Scholarship Guidance</div>
+    <div class="abroad-feature"><span class="feature-icon">🎧</span>End-to-End Support</div>
+  </section>
+
+  <main class="abroad-destinations">
+    <div class="abroad-heading">
+      <div class="eyebrow">POPULAR DESTINATIONS</div>
+      <h2>Top Study Abroad Destinations</h2>
+      <p>Choose from popular countries with education and career opportunities.</p>
+    </div>
+
+    <div class="country-grid">
+
+      <article class="country-card">
+        <img src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=700&q=80" alt="Sydney, Australia">
+        <div class="country-content">
+          <div class="country-title"><span class="flag">🇦🇺</span><h3>Australia</h3></div>
+          <strong>Popular Courses</strong>
+          <p>Business | IT | Engineering | Nursing | Hospitality | Life Sciences</p>
+          <a class="country-enquire" href="https://wa.me/917207893116?text=Hi%2C%20I%20am%20interested%20in%20studying%20in%20Australia." target="_blank" rel="noopener">Enquire Now →</a>
+        </div>
+      </article>
+
+      <article class="country-card">
+        <img src="https://images.unsplash.com/photo-1517935706615-2717063c2225?auto=format&fit=crop&w=700&q=80" alt="Toronto, Canada">
+        <div class="country-content">
+          <div class="country-title"><span class="flag">🇨🇦</span><h3>Canada</h3></div>
+          <strong>Popular Courses</strong>
+          <p>Business | IT | Engineering | Healthcare | Data Science | Hospitality</p>
+          <a class="country-enquire" href="https://wa.me/917207893116?text=Hi%2C%20I%20am%20interested%20in%20studying%20in%20Canada." target="_blank" rel="noopener">Enquire Now →</a>
+        </div>
+      </article>
+
+      <article class="country-card">
+        <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=700&q=80" alt="London, United Kingdom">
+        <div class="country-content">
+          <div class="country-title"><span class="flag">🇬🇧</span><h3>United Kingdom</h3></div>
+          <strong>Popular Courses</strong>
+          <p>Business | Law | Engineering | IT | Health Sciences | Arts & Design</p>
+          <a class="country-enquire" href="https://wa.me/917207893116?text=Hi%2C%20I%20am%20interested%20in%20studying%20in%20the%20UK." target="_blank" rel="noopener">Enquire Now →</a>
+        </div>
+      </article>
+
+      <article class="country-card">
+        <img src="https://images.unsplash.com/photo-1496588152823-86ff7695e68f?auto=format&fit=crop&w=700&q=80" alt="New York, USA">
+        <div class="country-content">
+          <div class="country-title"><span class="flag">🇺🇸</span><h3>United States</h3></div>
+          <strong>Popular Courses</strong>
+          <p>Business | Engineering | IT | Data Science | Healthcare | Arts</p>
+          <a class="country-enquire" href="https://wa.me/917207893116?text=Hi%2C%20I%20am%20interested%20in%20studying%20in%20the%20USA." target="_blank" rel="noopener">Enquire Now →</a>
+        </div>
+      </article>
+
+      <article class="country-card">
+        <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=700&q=80" alt="Germany">
+        <div class="country-content">
+          <div class="country-title"><span class="flag">🇩🇪</span><h3>Germany</h3></div>
+          <strong>Popular Courses</strong>
+          <p>Engineering | IT | Automotive | MBA | Research Programmes</p>
+          <a class="country-enquire" href="https://wa.me/917207893116?text=Hi%2C%20I%20am%20interested%20in%20studying%20in%20Germany." target="_blank" rel="noopener">Enquire Now →</a>
+        </div>
+      </article>
+
+      <article class="country-card">
+        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=700&q=80" alt="Paris, France">
+        <div class="country-content">
+          <div class="country-title"><span class="flag">🇫🇷</span><h3>France</h3></div>
+          <strong>Popular Courses</strong>
+          <p>Business | Hospitality | Arts & Design | Fashion | Luxury Management</p>
+          <a class="country-enquire" href="https://wa.me/917207893116?text=Hi%2C%20I%20am%20interested%20in%20studying%20in%20France." target="_blank" rel="noopener">Enquire Now →</a>
+        </div>
+      </article>
+
+      <article class="country-card">
+        <img src="https://images.unsplash.com/photo-1507699622108-4be3abd695ad?auto=format&fit=crop&w=700&q=80" alt="New Zealand">
+        <div class="country-content">
+          <div class="country-title"><span class="flag">🇳🇿</span><h3>New Zealand</h3></div>
+          <strong>Popular Courses</strong>
+          <p>Business | IT | Engineering | Hospitality | Nursing | Environmental Science</p>
+          <a class="country-enquire" href="https://wa.me/917207893116?text=Hi%2C%20I%20am%20interested%20in%20studying%20in%20New%20Zealand." target="_blank" rel="noopener">Enquire Now →</a>
+        </div>
+      </article>
+
+      <article class="country-card">
+        <img src="https://images.unsplash.com/photo-1590089415225-401ed6f9db8e?auto=format&fit=crop&w=700&q=80" alt="Ireland">
+        <div class="country-content">
+          <div class="country-title"><span class="flag">🇮🇪</span><h3>Ireland</h3></div>
+          <strong>Popular Courses</strong>
+          <p>IT | Business | Engineering | Healthcare | Data Analytics | Life Sciences</p>
+          <a class="country-enquire" href="https://wa.me/917207893116?text=Hi%2C%20I%20am%20interested%20in%20studying%20in%20Ireland." target="_blank" rel="noopener">Enquire Now →</a>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <section class="abroad-cta">
+    <div>
+      <div class="eyebrow">READY TO STUDY ABROAD?</div>
+      <h2>Get Expert Guidance Today!</h2>
+      <p>We help with university selection, applications, visas and more.</p>
+    </div>
+    <a href="https://wa.me/917207893116?text=Hi%2C%20I%20need%20Study%20Abroad%20guidance." target="_blank" rel="noopener">☏ Enquire Now</a>
+  </section>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,419 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Study PG in India | Vedic Education Services</title>
+  <meta name="description" content="Explore top Indian universities for postgraduate admissions, including MSc, MTech, MBA, MCA, MA and research programs.">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .pg-page {
+      background: #f1f6fc;
+      color: #10294b;
+      padding-bottom: 35px;
+    }
+
+    .pg-hero {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 30px;
+      padding: 45px 5%;
+      background: linear-gradient(120deg, #071d3a, #123f70);
+      color: white;
+    }
+
+    .pg-hero h1 {
+      font-size: clamp(36px, 5vw, 58px);
+      line-height: 1.08;
+      margin: 0 0 15px;
+    }
+
+    .pg-hero h1 span {
+      color: #ffc64b;
+    }
+
+    .pg-hero p {
+      line-height: 1.7;
+      margin: 10px 0;
+    }
+
+    .pg-hero img {
+      width: 100%;
+      height: 270px;
+      object-fit: cover;
+      border-radius: 18px;
+      border: 4px solid white;
+    }
+
+    .pg-features {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      margin: 20px 2%;
+      padding: 22px 12px;
+      border-radius: 14px;
+      background: white;
+      text-align: center;
+    }
+
+    .pg-features div {
+      padding: 8px;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .pg-heading {
+      text-align: center;
+      padding: 20px 15px;
+    }
+
+    .pg-heading p {
+      color: #52647c;
+    }
+
+    .pg-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+      padding: 0 3%;
+    }
+
+    .pg-card {
+      min-width: 0;
+      overflow: hidden;
+      border-radius: 13px;
+      background: white;
+      border: 1px solid #e0e8f2;
+      box-shadow: 0 4px 14px rgba(13, 42, 75, 0.07);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .pg-campus {
+      width: 100%;
+      height: 135px;
+      object-fit: cover;
+    }
+
+    .pg-card-content {
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1;
+    }
+
+    .pg-uni {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .pg-logo {
+      width: 52px;
+      height: 52px;
+      flex: 0 0 52px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #edf4fc;
+      border: 1px solid #d8e4f3;
+      color: #123f70;
+      font-weight: 800;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .pg-uni h3 {
+      font-size: 15px;
+      line-height: 1.4;
+      margin: 0;
+    }
+
+    .pg-location {
+      color: #52647c;
+      font-size: 13px;
+    }
+
+    .pg-programs {
+      background: #edf4fc;
+      border-radius: 9px;
+      padding: 10px;
+      color: #263d58;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .pg-programs strong {
+      display: block;
+      color: #123f70;
+      margin-bottom: 3px;
+    }
+
+    .pg-tag {
+      align-self: flex-start;
+      padding: 6px 12px;
+      background: #fff0c9;
+      color: #65430b;
+      border-radius: 20px;
+      font-size: 12px;
+    }
+
+    .pg-enquire {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      background: #08ad63;
+      color: white;
+      padding: 12px 8px;
+      border-radius: 9px;
+      font-weight: 700;
+      margin-top: auto;
+    }
+
+    .pg-enquire:hover {
+      background: #078e52;
+    }
+
+    .pg-cta {
+      margin: 30px 3% 0;
+      padding: 25px;
+      background: white;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .pg-cta h2 {
+      margin: 0 0 8px;
+    }
+
+    .pg-cta p {
+      margin: 0;
+      color: #52647c;
+    }
+
+    .pg-cta .pg-enquire {
+      min-width: 180px;
+    }
+
+    @media (max-width: 1000px) {
+      .pg-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 650px) {
+      .pg-hero {
+        grid-template-columns: 1fr;
+        padding: 30px 5%;
+      }
+
+      .pg-hero img {
+        height: 210px;
+      }
+
+      .pg-features {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .pg-grid {
+        grid-template-columns: 1fr;
+        padding: 0 5%;
+      }
+
+      .pg-cta {
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Vedic Education Services home">
+        <img src="assets/logo/vedic-logo.png" alt="Vedic Education Services">
+        <span class="brand-text">
+          <strong>VEDIC</strong>
+          <small>EDUCATION SERVICES</small>
+        </span>
+      </a>
+
+      <button class="menu" aria-label="Open menu">☰</button>
+
+      <nav class="navlinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="study-abroad.html">Study Abroad</a>
+        <a href="contact.html" class="nav-cta">Free Counselling ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pg-page">
+
+    <section class="pg-hero">
+      <div>
+        <h1>Study <span>PG</span><br>in India</h1>
+        <p>Top Universities | Research Opportunities | Better Career Prospects</p>
+        <p>Explore postgraduate programs at leading Indian universities. Find suitable courses and get guidance for your admission journey.</p>
+      </div>
+
+      <img
+        src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1000&q=85"
+        alt="University campus"
+      >
+    </section>
+
+    <section class="pg-features">
+      <div>🎓<br>Top Universities</div>
+      <div>📚<br>Wide Range of PG Programs</div>
+      <div>🔬<br>Research Opportunities</div>
+      <div>💼<br>Career Prospects</div>
+      <div>🏛️<br>Government & Private</div>
+    </section>
+
+    <section class="pg-heading">
+      <p>TOP UNIVERSITIES</p>
+      <h2>Popular PG Universities in India</h2>
+      <p>Explore universities for postgraduate study and research.</p>
+    </section>
+
+    <section class="pg-grid">
+
+      <article class="pg-card">
+        <img class="pg-campus" src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=600&q=80" alt="IISc campus">
+        <div class="pg-card-content">
+          <div class="pg-uni">
+            <div class="pg-logo">IISc</div>
+            <h3>Indian Institute of Science (IISc)</h3>
+          </div>
+          <div class="pg-location">📍 Bengaluru, Karnataka</div>
+          <div class="pg-programs"><strong>Popular PG Programs</strong>M.Sc., M.Tech., M.Des., research programs</div>
+          <span class="pg-tag">Research Institute</span>
+          <a class="pg-enquire" href="https://wa.me/917207893116?text=Hi%2C%20I%20am%20interested%20in%20PG%20admission%20guidance%20for%20IISc." target="_blank" rel="noopener noreferrer">☏ Enquire Now</a>
+        </div>
+      </article>
+
+      <article class="pg-card">
+        <img class="pg-campus" src="https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?auto=format&fit=crop&w=600&q=80" alt="IIT Bombay campus">
+        <div class="pg-card-content">
+          <div class="pg-uni">
+            <div class="pg-logo">IITB</div>
+            <h3>IIT Bombay</h3>
+          </div>
+          <div class="pg-location">📍 Mumbai, Maharashtra</div>
+          <div class="pg-programs"><strong>Popular PG Programs</strong>M.Tech., M.Des., M.Sc., MBA, M.Phil., Ph.D.</div>
+          <span class="pg-tag">Government</span>
+          <a class="pg-enquire" href="https://wa.me/917207893116?text=Hi%2C%20I%20am%20interested%20in%20PG%20admission%20guidance%20for%20IIT%20Bombay." target="_blank" rel="noopener noreferrer">☏ Enquire Now</a>
+        </div>
+      </article>
+
+      <article class="pg-card">
+        <img class="pg-campus" src="https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?auto=format&fit=crop&w=600&q=80" alt="IIT Delhi campus">
+        <div class="pg-card-content">
+          <div class="pg-uni">
+            <div class="pg-logo">IITD</div>
+            <h3>IIT Delhi</h3>
+          </div>
+          <div class="pg-location">📍 New Delhi</div>
+          <div class="pg-programs"><strong>Popular PG Programs</strong>M.Tech., M.Des., M.Sc., MBA, Ph.D.</div>
+          <span class="pg-tag">Government</span>
+          <a class="pg-enquire" href="https://wa.me/917207893116?text=Hi%2C%20I%20am%20interested%20in%20PG%20admission%20guidance%20for%20IIT%20Delhi." target="_blank" rel="noopener noreferrer">☏ Enquire Now</a>
+        </div>
+      </article>
+
+      <article class="pg-card">
+        <img class="pg-campus" src="https://images.unsplash.com/photo-1564981797816-1043664bf78d?auto=format&fit=crop&w=600&q=80" alt="IIT Madras campus">
+        <div class="pg-card-content">
+          <div class="pg-uni">
+            <div class="pg-logo">IITM</div>
+            <h3>IIT Madras</h3>
+          </div>
+          <div class="pg-location">📍 Chennai, Tamil Nadu</div>
+          <div class="pg-programs"><strong>Popular PG Programs</strong>M.Tech., M.Sc., MBA, M.S. by Research, Ph.D.</div>
+          <span class="pg-tag">Government</span>
+          <a class="pg-enquire" href="https://wa.me/917207893116?text=Hi%2C%20I%20am%20interested%20in%20PG%20admission%20guidance%20for%20IIT%20Madras." target="_blank" rel="noopener noreferrer">☏ Enquire Now</a>
+        </div>
+      </article>
+
+      <article class="pg-card">
+        <img class="pg-campus" src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=600&q=80" alt="JNU campus">
+        <div class="pg-card-content">
+          <div class="pg-uni">
+            <div class="pg-logo">JNU</div>
+            <h3>Jawaharlal Nehru University (JNU)</h3>
+          </div>
+          <div class="pg-location">📍 New Delhi</div>
+          <div class="pg-programs"><strong>Popular PG Programs</strong>MA, M.Sc., M.Phil. where offered, Ph.D., international studies</div>
+          <span class="pg-tag">Government</span>
+          <a class="pg-enquire" href="https://wa.me/917207893116?text=Hi%2C%20I%20am%20interested%20in%20PG%20admission%20guidance%20for%20JNU." target="_blank" rel="noopener noreferrer">☏ Enquire Now</a>
+        </div>
+      </article>
+
+      <article class="pg-card">
+        <img class="pg-campus" src="https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?auto=format&fit=crop&w=600&q=80" alt="University of Delhi campus">
+        <div class="pg-card-content">
+          <div class="pg-uni">
+            <div class="pg-logo">DU</div>
+            <h3>University of Delhi (DU)</h3>
+          </div>
+          <div class="pg-location">📍 New Delhi</div>
+          <div class="pg-programs"><strong>Popular PG Programs</strong>MA, M.Sc., M.Com., MBA, MCA, PG diplomas</div>
+          <span class="pg-tag">Government</span>
+          <a class="pg-enquire" href="https://wa.me/917207893116?text=Hi%2C%20I%20am%20interested%20in%20PG%20admission%20guidance%20for%20Delhi%20University." target="_blank" rel="noopener noreferrer">☏ Enquire Now</a>
+        </div>
+      </article>
+
+      <article class="pg-card">
+        <img class="pg-campus" src="https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?auto=format&fit=crop&w=600&q=80" alt="Banaras Hindu University campus">
+        <div class="pg-card-content">
+          <div class="pg-uni">
+            <div class="pg-logo">BHU</div>
+            <h3>Banaras Hindu University (BHU)</h3>
+          </div>
+          <div class="pg-location">📍 Varanasi, Uttar Pradesh</div>
+          <div class="pg-programs"><strong>Popular PG Programs</strong>MA, M.Sc., M.Com., M.Tech., MCA, Ph.D.</div>
+          <span class="pg-tag">Government</span>
+          <a class="pg-enquire" href="https://wa.me/917207893116?text=Hi%2C%20I%20am%20interested%20in%20PG%20admission%20guidance%20for%20BHU." target="_blank" rel="noopener noreferrer">☏ Enquire Now</a>
+        </div>
+      </article>
+
+      <article class="pg-card">
+        <img class="pg-campus" src="https://images.unsplash.com/photo-1564981797816-1043664bf78d?auto=format&fit=crop&w=600&q=80" alt="University of Hyderabad campus">
+        <div class="pg-card-content">
+          <div class="pg-uni">
+            <div class="pg-logo">UoH</div>
+            <h3>University of Hyderabad</h3>
+          </div>
+          <div class="pg-location">📍 Hyderabad, Telangana</div>
+          <div class="pg-programs"><strong>Popular PG Programs</strong>MA, M.Sc., M.Tech., MBA, MCA and research programs</div>
+          <span class="pg-tag">Government</span>
+          <a class="pg-enquire" href="https://wa.me/917207893116?text=Hi%2C%20I%20am%20interested%20in%20PG%20admission%20guidance%20for%20University%20of%20Hyderabad." target="_blank" rel="noopener noreferrer">☏ Enquire Now</a>
+        </div>
+      </article>
+
+    </section>
+
+    <section class="pg-cta">
+      <div>
+        <h2>Need Help with PG Admissions?</h2>
+        <p>Get guidance for university selection, eligibility and applications.</p>
+      </div>
+      <a class="pg-enquire" href="https://wa.me/917207893116?text=Hi%2C%20I%20need%20PG%20admission%20guidance%20in%20India." target="_blank" rel="noopener noreferrer">☏ Enquire Now</a>
+    </section>
+
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,876 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Blogs &amp; Insights | Vedic Educational Services</title>
+<meta name="description" content="Explore study abroad guides, MBBS admissions, B.Tech options, scholarships and international career advice from Vedic Educational Services.">
+
+<link rel="icon" href="assets/logo/favicon.png">
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+/* BLOG PAGE DESIGN */
+.blog-page {
+  color: #0b2345;
+  background: #fff;
+}
+
+.blog-hero {
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  background:
+    linear-gradient(90deg, rgba(4,25,54,.98), rgba(4,25,54,.82) 48%, rgba(4,25,54,.08)),
+    url("assets/images/international-students.jpg") center / cover no-repeat;
+}
+
+.blog-hero .container {
+  padding-top: 42px;
+  padding-bottom: 42px;
+}
+
+.blog-eyebrow {
+  color: #ffc43d;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.blog-hero h1 {
+  margin: 8px 0 10px;
+  color: #fff;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.08;
+}
+
+.blog-hero p {
+  max-width: 620px;
+  margin: 0;
+  color: #eef4ff;
+  line-height: 1.7;
+}
+
+.blog-wrap {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+}
+
+/* CATEGORY FILTERS */
+.blog-filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 22px 0;
+}
+
+.blog-filter {
+  border: 1px solid #dce4ef;
+  background: #fff;
+  color: #29405f;
+  border-radius: 28px;
+  padding: 10px 17px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+  transition: .2s;
+}
+
+.blog-filter:hover,
+.blog-filter.active {
+  background: #071f43;
+  color: #fff;
+  border-color: #071f43;
+}
+
+/* FEATURED BLOG */
+.blog-featured {
+  display: grid;
+  grid-template-columns: 1fr 1.12fr;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(8,34,70,.09);
+  border: 1px solid #edf1f7;
+  margin-bottom: 34px;
+}
+
+.blog-featured-image {
+  min-height: 280px;
+  background: #e8eef6;
+}
+
+.blog-featured-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+.blog-featured-content {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.blog-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  color: #64748b;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.blog-tag {
+  display: inline-block;
+  background: #fff0c2;
+  color: #6f4b00;
+  border-radius: 20px;
+  padding: 5px 10px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.blog-featured h2 {
+  font-size: clamp(22px, 2.5vw, 29px);
+  line-height: 1.2;
+  margin: 0 0 12px;
+  color: #0b2345;
+}
+
+.blog-featured p {
+  color: #536781;
+  line-height: 1.65;
+  margin: 0 0 18px;
+}
+
+.blog-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 28px;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 13px;
+  background: #071f43;
+  color: #fff;
+  border: 0;
+  cursor: pointer;
+}
+
+.blog-btn:hover {
+  background: #153b70;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* LATEST ARTICLES */
+.blog-section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 16px;
+  margin: 32px 0 16px;
+}
+
+.blog-section-heading h2 {
+  margin: 0 0 5px;
+  font-size: 27px;
+  color: #0b2345;
+}
+
+.blog-section-heading p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.blog-view-all {
+  color: #0757b8;
+  font-weight: 800;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.blog-tile {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #e8edf4;
+  border-radius: 13px;
+  box-shadow: 0 7px 20px rgba(8,34,70,.06);
+  transition: transform .2s, box-shadow .2s;
+}
+
+.blog-tile:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 26px rgba(8,34,70,.12);
+}
+
+.blog-tile[hidden] {
+  display: none !important;
+}
+
+.blog-tile > img {
+  width: 100%;
+  height: 142px;
+  object-fit: cover;
+  display: block;
+  background: #e8eef6;
+}
+
+.blog-tile-content {
+  padding: 15px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.blog-tile h3 {
+  font-size: 16px;
+  line-height: 1.35;
+  margin: 10px 0 8px;
+  color: #0b2345;
+}
+
+.blog-tile p {
+  font-size: 13px;
+  line-height: 1.55;
+  color: #5b6e86;
+  margin: 0 0 14px;
+}
+
+.blog-read-more {
+  margin-top: auto;
+  color: #0757b8;
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+/* STUDENT FEEDBACK */
+.blog-reviews {
+  margin-top: 42px;
+  padding: 34px 0 38px;
+  background: #f1f6fd;
+}
+
+.blog-review-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.blog-review-heading h2 {
+  margin: 7px 0 5px;
+  font-size: 27px;
+  color: #0b2345;
+}
+
+.blog-review-heading p {
+  margin: 0;
+  color: #60748e;
+  font-size: 14px;
+}
+
+.blog-review-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.blog-review {
+  background: #fff;
+  border: 1px solid #e5ebf4;
+  border-radius: 14px;
+  padding: 21px;
+  box-shadow: 0 6px 18px rgba(8,34,70,.04);
+}
+
+.blog-review-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.blog-avatar {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #e8effa;
+  color: #0b2345;
+  font-weight: 800;
+}
+
+.blog-review-name {
+  font-size: 14px;
+  font-weight: 800;
+  color: #0b2345;
+}
+
+.blog-review-context {
+  font-size: 12px;
+  color: #718198;
+  margin-top: 3px;
+}
+
+.blog-stars {
+  color: #f4ad00;
+  letter-spacing: 2px;
+  font-size: 19px;
+  margin: 4px 0 10px;
+}
+
+.blog-review blockquote {
+  margin: 0;
+  color: #536781;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.blog-sample-note {
+  font-size: 11px;
+  color: #718198;
+  margin-top: 14px;
+}
+
+/* COUNSELLING CTA */
+.blog-cta {
+  width: min(1200px, 92%);
+  margin: 32px auto 38px;
+  border-radius: 16px;
+  padding: 28px 32px;
+  color: #fff;
+  background: linear-gradient(110deg, #061d3e, #0c2d59);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+}
+
+.blog-cta h2 {
+  color: #fff;
+  font-size: 25px;
+  margin: 0 0 8px;
+}
+
+.blog-cta p {
+  color: #e0e9f7;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.blog-btn-gold {
+  background: #ffc43d;
+  color: #071f43;
+  white-space: nowrap;
+}
+
+.blog-btn-gold:hover {
+  background: #ffd56c;
+  color: #071f43;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 950px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .blog-featured {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .blog-hero {
+    min-height: 230px;
+    background-position: 60% center;
+  }
+
+  .blog-hero .container {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .blog-featured {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-featured-image,
+  .blog-featured-image img {
+    min-height: 190px;
+    height: 190px;
+  }
+
+  .blog-featured-content {
+    padding: 21px;
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-tile {
+    display: grid;
+    grid-template-columns: 115px minmax(0, 1fr);
+  }
+
+  .blog-tile > img {
+    height: 100%;
+    min-height: 170px;
+  }
+
+  .blog-tile-content {
+    padding: 13px;
+  }
+
+  .blog-tile h3 {
+    font-size: 15px;
+  }
+
+  .blog-review-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-section-heading,
+  .blog-review-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .blog-cta {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+  <div class="scrolling-text">
+    🎓 Admissions • Coaching • Study Abroad • Career Pathways
+    &nbsp;&nbsp; || &nbsp;&nbsp;
+  </div>
+</div>
+
+<header class="header">
+  <div class="container nav">
+    <a class="brand" href="index.html" aria-label="Vedic Educational Services home">
+      <img src="assets/logo/vedic-logo.png" alt="Vedic Educational Services">
+      <span class="brand-text">
+        <strong>VEDIC</strong>
+        <small>EDUCATION SERVICES</small>
+      </span>
+    </a>
+
+    <button class="menu" aria-label="Open menu">☰</button>
+
+    <nav class="navlinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="blog.html" aria-current="page">Blogs</a>
+      <a href="contact.html" class="nav-cta">Free Counselling ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main class="blog-page">
+
+  <!-- BLOG HERO -->
+  <section class="blog-hero">
+    <div class="container">
+      <div class="blog-eyebrow">Our Blogs</div>
+      <h1>Blogs &amp; Insights<br>Your Guide to a Global Future</h1>
+      <p>
+        Explore helpful guides, admission updates and career advice to plan
+        your education and international future with confidence.
+      </p>
+    </div>
+  </section>
+
+  <section class="blog-wrap" aria-label="Blog articles">
+
+    <!-- CATEGORY FILTERS -->
+    <div class="blog-filters" role="group" aria-label="Filter blog articles">
+      <button class="blog-filter active" type="button" data-filter="all" aria-pressed="true">All</button>
+      <button class="blog-filter" type="button" data-filter="study-abroad" aria-pressed="false">Study Abroad</button>
+      <button class="blog-filter" type="button" data-filter="mbbs" aria-pressed="false">MBBS</button>
+      <button class="blog-filter" type="button" data-filter="btech" aria-pressed="false">B.Tech Admissions</button>
+      <button class="blog-filter" type="button" data-filter="pg" aria-pressed="false">PG Admissions</button>
+      <button class="blog-filter" type="button" data-filter="jobs" aria-pressed="false">Job Pathways</button>
+      <button class="blog-filter" type="button" data-filter="scholarships" aria-pressed="false">Scholarships</button>
+      <button class="blog-filter" type="button" data-filter="career" aria-pressed="false">Career Guidance</button>
+    </div>
+
+    <!-- FEATURED BLOG -->
+    <article class="blog-featured">
+      <div class="blog-featured-image">
+        <img src="assets/images/international-students.jpg"
+             alt="Students exploring international education options">
+      </div>
+
+      <div class="blog-featured-content">
+        <div class="blog-meta">
+          <span class="blog-tag">Featured Blog</span>
+          <span>Study Abroad</span>
+          <span>Planning Guide</span>
+        </div>
+
+        <h2>How to Plan Your Study Abroad Journey</h2>
+
+        <p>
+          Explore course selection, destination research, budgeting,
+          scholarships and application preparation before making your next move.
+        </p>
+
+        <a class="blog-btn" href="study-abroad.html">
+          Explore Study Abroad ↗
+        </a>
+      </div>
+    </article>
+
+    <!-- LATEST ARTICLES HEADING -->
+    <div class="blog-section-heading">
+      <div>
+        <h2>Latest Articles</h2>
+        <p>Guides and ideas for your next education or career step.</p>
+      </div>
+
+      <a class="blog-view-all" href="contact.html">
+        Need guidance? ↗
+      </a>
+    </div>
+
+    <!-- BLOG CARDS -->
+    <div class="blog-grid" id="blogArticleGrid">
+
+      <article class="blog-tile" data-category="mbbs">
+        <img src="assets/images/university-student.jpg"
+             alt="Students learning about university admissions">
+
+        <div class="blog-tile-content">
+          <div class="blog-meta">
+            <span class="blog-tag">MBBS</span>
+            <span>Admissions Guide</span>
+          </div>
+
+          <h3>MBBS Abroad: What Students Should Check First</h3>
+
+          <p>
+            Review eligibility, university recognition, total costs and
+            required documents before applying.
+          </p>
+
+          <a class="blog-read-more" href="study-mbbs.html">
+            Explore MBBS ↗
+          </a>
+        </div>
+      </article>
+
+      
+
+      <article class="blog-tile" data-category="jobs career">
+        <img src="assets/images/graduate-success.jpg"
+             alt="Graduate preparing for international career opportunities">
+
+        <div class="blog-tile-content">
+          <div class="blog-meta">
+            <span class="blog-tag">Job Pathways</span>
+            <span>Career</span>
+          </div>
+
+          <h3>Preparing for an International Career</h3>
+
+          <p>
+            Build a clear plan for your resume, interviews, documentation
+            and career goals.
+          </p>
+
+          <a class="blog-read-more" href="study-jobs.html">
+            Explore Job Pathways ↗
+          </a>
+        </div>
+      </article>
+
+      <article class="blog-tile" data-category="btech">
+        <img src="assets/images/university-campus.jpg"
+             alt="University campus for engineering admissions">
+
+        <div class="blog-tile-content">
+          <div class="blog-meta">
+            <span class="blog-tag">B.Tech</span>
+            <span>Admissions</span>
+          </div>
+
+          <h3>B.Tech Admissions: Comparing Your Options</h3>
+
+          <p>
+            Consider specialisations, campus facilities, eligibility and
+            long-term career interests.
+          </p>
+
+          <a class="blog-read-more" href="study-btech.html">
+            Explore B.Tech ↗
+          </a>
+        </div>
+      </article>
+
+      <article class="blog-tile" data-category="pg study-abroad">
+        <img src="assets/images/education-books.jpg"
+             alt="Books and study materials for postgraduate study">
+
+        <div class="blog-tile-content">
+          <div class="blog-meta">
+            <span class="blog-tag">PG Admissions</span>
+            <span>Planning</span>
+          </div>
+
+          <h3>Planning Your Postgraduate Studies</h3>
+
+          <p>
+            Match your academic background, course goals, budget and
+            application timeline.
+          </p>
+
+          <a class="blog-read-more" href="study-pg.html">
+            Explore PG Options ↗
+          </a>
+        </div>
+      </article>
+
+      
+
+    </div>
+
+    <p id="blogNoResults" hidden style="color:#64748b;padding:18px 0">
+      No articles in this category yet. Please check another category.
+    </p>
+
+  </section>
+
+  <!-- STUDENT FEEDBACK -->
+  <section class="blog-reviews">
+    <div class="blog-wrap">
+
+      <div class="blog-review-heading">
+        <div>
+          <span class="blog-tag">Student Feedback</span>
+          <h2>What Students Value</h2>
+          <p>
+            A review section ready for verified feedback from VEDIC students.
+          </p>
+        </div>
+      </div>
+
+      <div class="blog-review-grid">
+
+        <article class="blog-review">
+          <div class="blog-review-top">
+            <div class="blog-avatar" aria-hidden="true">S</div>
+            <div>
+              <div class="blog-review-name">Study Abroad Guidance</div>
+              <div class="blog-review-context">D.Kumar 
+              </div>
+            </div>
+          </div>
+
+          <div class="blog-stars" aria-label="Example star-rating style only; not an actual rating">
+            ★★★★★
+          </div>
+
+          <blockquote>
+            The counselling I got from the VEDIC team was excellent. They gave me proper guidance for shortlisting universities and helped me at every step of the application process. Because of their support, everything went very smoothly without any tension
+          </blockquote>
+        </article>
+
+        <article class="blog-review">
+          <div class="blog-review-top">
+            <div class="blog-avatar" aria-hidden="true">M</div>
+            <div>
+              <div class="blog-review-name">Admissions Support</div>
+              <div class="blog-review-context">B.Bhanu Prasad</div>
+            </div>
+          </div>
+
+          <div class="blog-stars" aria-label="Example star-rating style only; not an actual rating">
+            ★★★★★
+          </div>
+
+          <blockquote>
+            Very good experience with the admissions team. They were always available to clear my doubts on calls and WhatsApp. The communication was very clear from day one, and they made the entire admission process look very easy for me.
+          </blockquote>
+        </article>
+
+        <article class="blog-review">
+          <div class="blog-review-top">
+            <div class="blog-avatar" aria-hidden="true">C</div>
+            <div>
+              <div class="blog-review-name">Career Guidance</div>
+              <div class="blog-review-context">T.Rajesh</div>
+            </div>
+          </div>
+
+          <div class="blog-stars" aria-label="Example star-rating style only; not an actual rating">
+            ★★★★★
+          </div>
+
+          <blockquote>
+            "I took their help for career planning and it was totally worth it. The mock interviews really boosted my confidence a lot. They also helped me update my resume according to current industry standards. Highly recommended for freshers!"
+          </blockquote>
+        </article>
+
+      </div>
+
+      <p class="blog-sample-note">
+        DEMO REVIEW DESIGN ONLY — replace all placeholder text and star displays
+        with genuine student feedback and confirmed ratings before publishing.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- COUNSELLING CTA -->
+  <section class="blog-cta">
+    <div>
+      <h2>Need Personalised Guidance?</h2>
+      <p>
+        Talk to our counsellors about study options, admissions and
+        international career pathways.
+      </p>
+    </div>
+
+    <a class="blog-btn blog-btn-gold" href="contact.html">
+      Free Counselling ↗
+    </a>
+  </section>
+
+</main>
+
+<!-- VEDIC FOOTER START -->
+<footer class="vedic-footer">
+  <div class="vedic-footer-container">
+
+    <!-- MAPS -->
+    <div class="footer-map">
+      <h3>Find Us</h3>
+
+      <iframe
+        src="https://maps.google.com/maps?q=Hyderabad%2C%20Telangana&t=&z=11&ie=UTF8&iwloc=&output=embed"
+        title="Hyderabad Location"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+
+      <a
+        href="https://www.google.com/maps/search/?api=1&query=Hyderabad%2C+Telangana"
+        target="_blank"
+        rel="noopener noreferrer">
+        Hyderabad, Telangana — Open Maps ↗
+      </a>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div class="footer-column">
+      <h3>Quick Links</h3>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Our Services</a>
+      <a href="blog.html">Blogs</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+
+    <!-- SERVICES -->
+    <div class="footer-column">
+      <h3>Services</h3>
+      <a href="study-btech.html">Study B.Tech</a>
+      <a href="study-mbbs.html">Study MBBS</a>
+      <a href="study-pg.html">Study PG</a>
+      <a href="study-abroad.html">Study Abroad Masters</a>
+      <a href="study-jobs.html">Job Pathways</a>
+      <a href="services.html#coaching">Test Training</a>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="footer-column footer-contact">
+      <h3>Contact</h3>
+
+      <a href="tel:+917207893116">
+        ☎ Phone
+      </a>
+
+      <a href="mailto:getadmissionff@gmail.com">
+        ✉ Email
+      </a>
+
+      <a
+        href="https://wa.me/917207893116"
+        target="_blank"
+        rel="noopener noreferrer">
+        WhatsApp ↗
+      </a>
+
+      <a href="https://www.instagram.com/"
+         target="_blank" rel="noopener noreferrer">
+        Instagram ↗
+      </a>
+
+      <a href="https://www.linkedin.com/"
+         target="_blank" rel="noopener noreferrer">
+        LinkedIn ↗
+      </a>
+
+      <a href="https://www.facebook.com/"
+         target="_blank" rel="noopener noreferrer">
+        Facebook ↗
+      </a>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM FOOTER -->
+  <div class="vedic-footer-bottom">
+    <span>
+      © <span data-year></span> Vedic Educational Services.
+      All rights reserved.
+    </span>
+
+    <span>Supporting your education and career journey.</span>
+  </div>
+</footer>
+<!-- VEDIC FOOTER END -->
+
+<a class="whatsapp" href="contact.html" aria-label="Contact Vedic">✆</a>
+<div class="toast"></div>
+<script src="js/script.js"></script>
+
+</body>
+</html>

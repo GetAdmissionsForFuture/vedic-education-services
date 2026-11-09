@@ -1,0 +1,314 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Pathways Abroad | VEDIC Education Services</title>
+  <meta name="description" content="Explore international job opportunities, resume support, work visa guidance and career pathways with VEDIC Education Services.">
+  <link rel="icon" href="assets/logo/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .jobs-hero {
+      min-height: 225px;
+      padding: 40px 7%;
+      color: white;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(90deg, rgba(3, 28, 59, .96), rgba(3, 28, 59, .45)),
+        url("assets/images/graduate-success.jpg") center/cover no-repeat;
+    }
+
+    .jobs-hero .eyebrow {
+      color: #ffc541;
+      font-weight: 800;
+      letter-spacing: 2px;
+      font-size: 12px;
+    }
+
+    .jobs-hero h1 {
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.08;
+      margin: 8px 0;
+      color: white;
+    }
+
+    .jobs-hero h1 span { color: #ffc541; }
+
+    .jobs-hero p {
+      max-width: 470px;
+      line-height: 1.6;
+      margin: 8px 0 18px;
+    }
+
+    .jobs-button {
+      display: inline-block;
+      padding: 12px 22px;
+      background: #ffc541;
+      color: #092143;
+      text-decoration: none;
+      font-weight: 800;
+      border-radius: 5px;
+    }
+
+    .jobs-highlights {
+      background: #071b35;
+      color: white;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      padding: 16px 5%;
+      gap: 15px;
+    }
+
+    .jobs-highlights div {
+      padding: 5px 12px;
+      border-right: 1px solid #34465f;
+      font-size: 13px;
+    }
+
+    .jobs-highlights strong { display: block; }
+    .jobs-highlights span { color: #d5dfec; font-size: 11px; }
+
+    .jobs-section {
+      padding: 28px 5%;
+      background: #f5f9ff;
+    }
+
+    .jobs-section h2 {
+      color: #092143;
+      text-align: center;
+      font-size: 27px;
+      margin: 0 0 7px;
+    }
+
+    .jobs-subtitle {
+      text-align: center;
+      color: #64748b;
+      margin: 0 0 22px;
+    }
+
+    .jobs-services {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .jobs-card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(9, 33, 67, .07);
+    }
+
+    .jobs-card .jobs-icon {
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+
+    .jobs-card h3 {
+      color: #092143;
+      font-size: 17px;
+      margin: 0 0 12px;
+    }
+
+    .jobs-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .jobs-card li {
+      color: #52647d;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .jobs-card li::before {
+      content: "✓ ";
+      color: #efa900;
+      font-weight: bold;
+    }
+
+    .jobs-countries {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 12px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .jobs-country {
+      min-height: 95px;
+      border-radius: 9px;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      padding: 12px;
+      color: white;
+      font-weight: 800;
+      background: linear-gradient(145deg, #1d5c91, #092143);
+    }
+
+    .jobs-country:nth-child(even) {
+      background: linear-gradient(145deg, #5c8bb3, #15385f);
+    }
+
+    .jobs-country span {
+      position: relative;
+      z-index: 1;
+    }
+
+    .jobs-cta {
+      max-width: 1200px;
+      margin: 22px auto 0;
+      padding: 24px;
+      border-radius: 12px;
+      background: #062044;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .jobs-cta h2 {
+      color: white;
+      text-align: left;
+      font-size: 23px;
+    }
+
+    .jobs-cta p {
+      margin: 7px 0 0;
+      color: #e1e9f4;
+    }
+
+    @media (max-width: 850px) {
+      .jobs-services { grid-template-columns: repeat(2, 1fr); }
+      .jobs-countries { grid-template-columns: repeat(3, 1fr); }
+      .jobs-highlights { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 520px) {
+      .jobs-hero { padding: 35px 6%; }
+      .jobs-services { grid-template-columns: 1fr; }
+      .jobs-countries { grid-template-columns: repeat(2, 1fr); }
+      .jobs-cta { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topbar">
+    <div class="scrolling-text">
+      🎓 Admissions • Coaching • Career Pathways • International Opportunities
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="VEDIC home">
+        <img src="assets/logo/vedic-logo.png" alt="VEDIC Education Services">
+        <span class="brand-text">
+          <strong>VEDIC</strong>
+          <small>EDUCATION SERVICES</small>
+        </span>
+      </a>
+
+      <button class="menu" aria-label="Open menu">☰</button>
+
+      <nav class="navlinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="blog.html">Blogs</a>
+        <a href="contact.html" class="nav-cta">Free Counselling ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="jobs-hero">
+      <div>
+        <div class="eyebrow">CAREER PATHWAYS</div>
+        <h1>Job Pathways<br><span>in Abroad</span></h1>
+        <p>Explore international job opportunities with expert guidance for a successful global career.</p>
+        <a class="jobs-button" href="contact.html">Get Career Guidance →</a>
+      </div>
+    </section>
+
+    <section class="jobs-highlights">
+      <div>💼 <strong>Global Job Opportunities</strong><span>In Top Countries</span></div>
+      <div>📄 <strong>Resume & Interview Support</strong><span>For Better Placements</span></div>
+      <div>✈️ <strong>Work Visa Guidance</strong><span>Country-Specific Support</span></div>
+      <div>👥 <strong>Multiple Industries</strong><span>Healthcare, IT, Engineering, Hospitality</span></div>
+    </section>
+
+    <section class="jobs-section">
+      <h2>Our Job Pathways Services</h2>
+      <p class="jobs-subtitle">Complete guidance and support for your international career journey.</p>
+
+      <div class="jobs-services">
+        <article class="jobs-card">
+          <div class="jobs-icon">💼</div>
+          <h3>International Job Opportunities</h3>
+          <ul>
+            <li>Job search guidance</li>
+            <li>Country-wise opportunities</li>
+            <li>Role and industry exploration</li>
+            <li>Career counselling</li>
+          </ul>
+        </article>
+
+        <article class="jobs-card">
+          <div class="jobs-icon">📄</div>
+          <h3>Resume & Interview Support</h3>
+          <ul>
+            <li>Professional resume building</li>
+            <li>Interview preparation</li>
+            <li>Mock interviews</li>
+            <li>Communication skills training</li>
+          </ul>
+        </article>
+
+        <article class="jobs-card">
+          <div class="jobs-icon">✈️</div>
+          <h3>Work Visa & Career Guidance</h3>
+          <ul>
+            <li>Work visa process information</li>
+            <li>Documentation guidance</li>
+            <li>Country-specific requirements</li>
+            <li>Post-arrival support information</li>
+          </ul>
+        </article>
+
+        <article class="jobs-card">
+          <div class="jobs-icon">👥</div>
+          <h3>Industry-Focused Support</h3>
+          <ul>
+            <li>Healthcare</li>
+            <li>Information Technology</li>
+            <li>Engineering</li>
+            <li>Hospitality and more</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+
+      <div class="jobs-cta">
+        <div>
+          <h2>Ready to Start Your International Career?</h2>
+          <p>Get expert guidance and personalised support for your job search abroad.</p>
+        </div>
+        <a class="jobs-button" href="contact.html">Free Career Counselling →</a>
+      </div>
+    </section>
+  </main>
+
+ 

@@ -1,0 +1,741 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Study MBBS in India & Abroad | Vedic Education Services</title>
+  <meta name="description" content="Explore medical colleges in India and abroad. Get MBBS admission guidance, eligibility information, fee details and university selection support.">
+
+  <style>
+    :root {
+      --navy: #0b2345;
+      --gold: #d99a19;
+      --blue: #eaf4ff;
+      --text: #172b47;
+      --muted: #61738a;
+      --border: #e5ebf3;
+      --green: #08b875;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f8fafc;
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .navbar {
+      background: #fff;
+      min-height: 76px;
+      padding: 12px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      box-shadow: 0 2px 12px #0b234510;
+      position: relative;
+      z-index: 2;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--navy);
+      font-size: 23px;
+      font-weight: 800;
+    }
+
+    .brand img {
+      width: 55px;
+      height: 55px;
+      object-fit: contain;
+    }
+
+    .brand small {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      font-weight: 600;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .nav-links a:hover,
+    .nav-links .active {
+      color: var(--gold);
+    }
+
+    .nav-cta {
+      background: var(--navy);
+      color: #fff !important;
+      border-radius: 30px;
+      padding: 12px 19px;
+    }
+
+    .hero {
+      min-height: 290px;
+      padding: 38px 7%;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(90deg, #e8f3ff 0%, #e8f3ffed 40%, #e8f3ff30 100%),
+        url("https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=1800&q=85")
+        center 38% / cover no-repeat;
+    }
+
+    .hero-content {
+      max-width: 700px;
+    }
+
+    .eyebrow {
+      color: #98620a;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 9px;
+    }
+
+    .hero h1 {
+      font-size: clamp(34px, 4vw, 57px);
+      line-height: 1.08;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+
+    .hero h1 span {
+      color: #bd8121;
+    }
+
+    .hero h3 {
+      font-size: 19px;
+      margin-bottom: 8px;
+    }
+
+    .hero p {
+      color: #415771;
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+
+    .hero-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 17px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .hero-features span {
+      background: #ffffffd9;
+      border: 1px solid #ffffff;
+      border-radius: 25px;
+      padding: 8px 11px;
+    }
+
+    .main-layout {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      gap: 15px;
+      padding: 16px 3%;
+      align-items: stretch;
+    }
+
+    .panel {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 15px;
+      min-width: 0;
+      box-shadow: 0 5px 20px #0b234508;
+    }
+
+    .panel-heading {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 15px;
+    }
+
+    .heading-icon {
+      flex: 0 0 48px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: var(--blue);
+      font-size: 27px;
+    }
+
+    .panel-heading h2 {
+      font-size: 22px;
+      line-height: 1.25;
+      color: var(--navy);
+    }
+
+    .panel-heading p {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    .outline-link {
+      margin-left: auto;
+      flex-shrink: 0;
+      border: 1px solid #e2b15b;
+      color: #a46a0c;
+      padding: 8px 11px;
+      border-radius: 10px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .college-list {
+      display: grid;
+      gap: 9px;
+    }
+
+    .college-card {
+      display: grid;
+      grid-template-columns: 120px minmax(0, 1fr);
+      gap: 12px;
+      padding: 9px;
+      border: 1px solid #edf1f6;
+      border-radius: 13px;
+      background: #fff;
+      box-shadow: 0 3px 12px #142b4507;
+    }
+
+    .college-image {
+      width: 120px;
+      height: 91px;
+      object-fit: cover;
+      border-radius: 8px;
+      background: var(--blue);
+    }
+
+    .college-info {
+      min-width: 0;
+    }
+
+    .college-info h3 {
+      color: var(--navy);
+      font-size: 14px;
+      line-height: 1.35;
+      margin: 2px 0 5px;
+    }
+
+    .location {
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 7px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-bottom: 9px;
+    }
+
+    .tags span {
+      background: #f0f4f8;
+      color: #31455f;
+      border-radius: 6px;
+      padding: 4px 7px;
+      font-size: 10px;
+    }
+
+    .enquire {
+      display: inline-block;
+      background: var(--green);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 800;
+      padding: 8px 12px;
+      border-radius: 9px;
+      transition: background .2s;
+    }
+
+    .enquire:hover {
+      background: #07965f;
+    }
+
+    .country-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .country-card {
+      overflow: hidden;
+      border: 1px solid #e7edf5;
+      border-radius: 12px;
+      background: #fff;
+      box-shadow: 0 4px 12px #0b234508;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+
+    .country-image {
+      width: 100%;
+      height: 100px;
+      object-fit: cover;
+      background: var(--blue);
+    }
+
+    .country-content {
+      padding: 10px;
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+    }
+
+    .country-title {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      margin-bottom: 7px;
+    }
+
+    .flag {
+      font-size: 25px;
+      line-height: 1;
+    }
+
+    .country-title h3 {
+      color: var(--navy);
+      font-size: 14px;
+    }
+
+    .country-content ul {
+      padding-left: 16px;
+      color: #43556d;
+      font-size: 11px;
+      margin-bottom: 12px;
+      flex: 1;
+    }
+
+    .country-content li {
+      margin-bottom: 4px;
+    }
+
+    .country-link {
+      display: block;
+      text-align: center;
+      padding: 9px 5px;
+      border-radius: 8px;
+      background: #e6f2ff;
+      color: #10427c;
+      font-size: 11px;
+      font-weight: 800;
+      margin-top: auto;
+    }
+
+    .country-link:hover {
+      background: #cfe5ff;
+    }
+
+    .country-card:nth-child(2) .country-link {
+      background: #fff0ed;
+      color: #a93427;
+    }
+
+    .country-card:nth-child(3) .country-link {
+      background: #e4f9ec;
+      color: #08743a;
+    }
+
+    .country-card:nth-child(4) .country-link {
+      background: #fff3d5;
+      color: #98600b;
+    }
+
+    .country-card:nth-child(5) .country-link {
+      background: #f1e7ff;
+      color: #5d31a7;
+    }
+
+    .country-card:nth-child(6) .country-link {
+      background: #e3f0ff;
+      color: #174a87;
+    }
+
+    .disclaimer {
+      padding: 0 4% 22px;
+      color: #6b7b8e;
+      font-size: 11px;
+    }
+
+    .footer {
+      padding: 22px 5%;
+      text-align: center;
+      background: var(--navy);
+      color: #fff;
+      font-size: 12px;
+    }
+
+    .footer a {
+      color: #f4c56a;
+    }
+
+    @media (max-width: 1050px) {
+      .main-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .country-image {
+        height: 150px;
+      }
+
+      .country-content ul {
+        font-size: 13px;
+      }
+
+      .country-title h3 {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .navbar {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .nav-links {
+        gap: 14px;
+        flex-wrap: wrap;
+        font-size: 12px;
+      }
+
+      .hero {
+        padding: 35px 6%;
+        background-position: center;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .hero-features {
+        gap: 7px;
+      }
+
+      .main-layout {
+        padding: 12px;
+      }
+
+      .panel {
+        padding: 11px;
+      }
+
+      .panel-heading h2 {
+        font-size: 18px;
+      }
+
+      .outline-link {
+        display: none;
+      }
+
+      .college-card {
+        grid-template-columns: 88px minmax(0, 1fr);
+        gap: 9px;
+      }
+
+      .college-image {
+        width: 88px;
+        height: 95px;
+      }
+
+      .country-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 9px;
+      }
+
+      .country-image {
+        height: 105px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="navbar">
+    <a class="brand" href="index.html">
+      <img src="assets/logo/vedic-logo.png" alt="Vedic Education Services">
+      <span>VEDIC<small>EDUCATION SERVICES</small></span>
+    </a>
+
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="study-abroad.html">Study Abroad</a>
+      <a href="blog.html">Blogs</a>
+      <a href="contact.html" class="nav-cta">Free Counselling ↗</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="eyebrow">Your Medical Career Starts Here</div>
+      <h1>Study MBBS in<br><span>India &amp; Abroad</span></h1>
+      <h3>Your Dream to Become a Doctor Starts Here</h3>
+      <p>Top Medical Universities | Fee Guidance | Admission Support</p>
+
+      <div class="hero-features">
+        <span>🩺 Expert Guidance</span>
+        <span>📋 University Shortlisting</span>
+        <span>👥 Admission Support</span>
+        <span>✈️ Visa Guidance</span>
+      </div>
+    </div>
+  </section>
+
+  <main class="main-layout">
+
+    <!-- INDIA: MEDICAL COLLEGES -->
+    <section class="panel" id="india">
+      <div class="panel-heading">
+        <div class="heading-icon">🇮🇳</div>
+        <div>
+          <h2>Top Medical Colleges in India</h2>
+          <p>Explore government and private medical colleges</p>
+        </div>
+        <a class="outline-link" href="#india">View All →</a>
+      </div>
+
+      <div class="college-list">
+
+        <article class="college-card">
+          <img class="college-image"
+               src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=400&q=80"
+               alt="Medical college campus">
+          <div class="college-info">
+            <h3>All India Institute of Medical Sciences (AIIMS)</h3>
+            <div class="location">📍 New Delhi</div>
+            <div class="tags">
+              <span>Government Institute</span>
+              <span>NEET Required</span>
+            </div>
+            <a class="enquire" target="_blank" rel="noopener"
+               href="https://wa.me/917207893116?text=Hi%2C%20I%20am%20interested%20in%20MBBS%20admission%20guidance%20for%20AIIMS.">☏ Enquire Now</a>
+          </div>
+        </article>
+
+        <article class="college-card">
+          <img class="college-image"
+               src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=400&q=80"
+               alt="College building">
+          <div class="college-info">
+            <h3>Christian Medical College (CMC)</h3>
+            <div class="location">📍 Vellore, Tamil Nadu</div>
+            <div class="tags">
+              <span>Medical Institute</span>
+              <span>NEET Required</span>
+            </div>
+            <a class="enquire" target="_blank" rel="noopener"
+               href="https://wa.me/917207893116?text=Hi%2C%20I%20am%20interested%20in%20MBBS%20admission%20guidance%20for%20CMC%20Vellore.">☏ Enquire Now</a>
+          </div>
+        </article>
+
+        <article class="college-card">
+          <img class="college-image"
+               src="https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?auto=format&fit=crop&w=400&q=80"
+               alt="University campus">
+          <div class="college-info">
+            <h3>Maulana Azad Medical College (MAMC)</h3>
+            <div class="location">📍 New Delhi</div>
+            <div class="tags">
+              <span>Government College</span>
+              <span>NEET Required</span>
+            </div>
+            <a class="enquire" target="_blank" rel="noopener"
+               href="https://wa.me/917207893116?text=Hi%2C%20I%20am%20interested%20in%20MBBS%20admission%20guidance%20for%20MAMC.">☏ Enquire Now</a>
+          </div>
+        </article>
+
+        <article class="college-card">
+          <img class="college-image"
+               src="https://images.unsplash.com/photo-1564981797816-1043664bf78d?auto=format&fit=crop&w=400&q=80"
+               alt="University entrance">
+          <div class="college-info">
+            <h3>JIPMER</h3>
+            <div class="location">📍 Puducherry</div>
+            <div class="tags">
+              <span>Central Institute</span>
+              <span>NEET Required</span>
+            </div>
+            <a class="enquire" target="_blank" rel="noopener"
+               href="https://wa.me/917207893116?text=Hi%2C%20I%20am%20interested%20in%20MBBS%20admission%20guidance%20for%20JIPMER.">☏ Enquire Now</a>
+          </div>
+        </article>
+
+        <article class="college-card">
+          <img class="college-image"
+               src="https://images.unsplash.com/photo-1568792923760-d70635a89fdc?auto=format&fit=crop&w=400&q=80"
+               alt="Medical education campus">
+          <div class="college-info">
+            <h3>Kasturba Medical College (KMC)</h3>
+            <div class="location">📍 Manipal, Karnataka</div>
+            <div class="tags">
+              <span>Private Medical College</span>
+              <span>NEET Required</span>
+            </div>
+            <a class="enquire" target="_blank" rel="noopener"
+               href="https://wa.me/917207893116?text=Hi%2C%20I%20am%20interested%20in%20MBBS%20admission%20guidance%20for%20KMC%20Manipal.">☏ Enquire Now</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ABROAD: COUNTRY CARDS -->
+    <section class="panel" id="abroad">
+      <div class="panel-heading">
+        <div class="heading-icon">🌍</div>
+        <div>
+          <h2>Study MBBS Abroad</h2>
+          <p>Explore countries and medical university options</p>
+        </div>
+      </div>
+
+      <div class="country-grid">
+
+        <article class="country-card">
+          <img class="country-image"
+               src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=500&q=80"
+               alt="London city">
+          <div class="country-content">
+            <div class="country-title"><span class="flag">🇬🇧</span><h3>United Kingdom</h3></div>
+            <ul>
+              <li>Established medical schools</li>
+              <li>Structured medical training</li>
+              <li>Competitive admissions</li>
+            </ul>
+            <a class="country-link" href="https://wa.me/917207893116?text=Hi%2C%20I%20want%20information%20about%20medical%20study%20options%20in%20the%20UK." target="_blank" rel="noopener">View Universities →</a>
+          </div>
+        </article>
+
+        <article class="country-card">
+          <img class="country-image"
+               src="https://images.unsplash.com/photo-1534430480872-3498386e7856?auto=format&fit=crop&w=500&q=80"
+               alt="New York city">
+          <div class="country-content">
+            <div class="country-title"><span class="flag">🇺🇸</span><h3>USA</h3></div>
+            <ul>
+              <li>Medical school pathways</li>
+              <li>Clinical training options</li>
+              <li>Competitive entry criteria</li>
+            </ul>
+            <a class="country-link" href="https://wa.me/917207893116?text=Hi%2C%20I%20want%20information%20about%20medical%20study%20options%20in%20the%20USA." target="_blank" rel="noopener">View Universities →</a>
+          </div>
+        </article>
+
+        <article class="country-card">
+          <img class="country-image"
+               src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=500&q=80"
+               alt="Dubai city skyline">
+          <div class="country-content">
+            <div class="country-title"><span class="flag">🇦🇪</span><h3>UAE</h3></div>
+            <ul>
+              <li>International campuses</li>
+              <li>Modern learning facilities</li>
+              <li>Check program recognition</li>
+            </ul>
+            <a class="country-link" href="https://wa.me/917207893116?text=Hi%2C%20I%20want%20information%20about%20medical%20study%20options%20in%20the%20UAE." target="_blank" rel="noopener">View Universities →</a>
+          </div>
+        </article>
+
+        <article class="country-card">
+          <img class="country-image"
+               src="https://images.unsplash.com/photo-1599946347371-68eb71b16afc?auto=format&fit=crop&w=500&q=80"
+               alt="Berlin city">
+          <div class="country-content">
+            <div class="country-title"><span class="flag">🇩🇪</span><h3>Germany</h3></div>
+            <ul>
+              <li>Strong medical education</li>
+              <li>Language requirements apply</li>
+              <li>Check entry requirements</li>
+            </ul>
+            <a class="country-link" href="https://wa.me/917207893116?text=Hi%2C%20I%20want%20information%20about%20medical%20study%20options%20in%20Germany." target="_blank" rel="noopener">View Universities →</a>
+          </div>
+        </article>
+
+        <article class="country-card">
+          <img class="country-image"
+               src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=500&q=80"
+               alt="Philippines city">
+          <div class="country-content">
+            <div class="country-title"><span class="flag">🇵🇭</span><h3>Philippines</h3></div>
+            <ul>
+              <li>Medical program options</li>
+              <li>Review course structure</li>
+              <li>Check eligibility carefully</li>
+            </ul>
+            <a class="country-link" href="https://wa.me/917207893116?text=Hi%2C%20I%20want%20information%20about%20medical%20study%20options%20in%20the%20Philippines." target="_blank" rel="noopener">View Universities →</a>
+          </div>
+        </article>
+
+        <article class="country-card">
+          <img class="country-image"
+               src="https://images.unsplash.com/photo-1596422846543-75c6fc197f07?auto=format&fit=crop&w=500&q=80"
+               alt="Kuala Lumpur city">
+          <div class="country-content">
+            <div class="country-title"><span class="flag">🇲🇾</span><h3>Malaysia</h3></div>
+            <ul>
+              <li>International study options</li>
+              <li>Compare program fees</li>
+              <li>Verify degree recognition</li>
+            </ul>
+            <a class="country-link" href="https://wa.me/917207893116?text=Hi%2C%20I%20want%20information%20about%20medical%20study%20options%20in%20Malaysia." target="_blank" rel="noopener">View Universities →</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <p class="disclaimer">
+    Admission eligibility, course availability, fees and recognition requirements vary by university and country.
+    Please verify current requirements before applying.
+  </p>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Vedic Education Services. All rights reserved.</p>
+    <p><a href="index.html">Home</a> · <a href="services.html">Services</a> · <a href="contact.html">Contact Us</a></p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
+```
